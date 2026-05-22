@@ -3,8 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="game.js"></script>
+    <div class="main">
+      <h1>Rock Paper and Scissors</h1>
+      <div class="container">
+        <div class="options">
+          <form>
+            <label for="rounds">Enter the no of rounds you want to play:</label>
+            <input
+              type="number"
+              id="rounds"
+              name="rounds"
+              min="1"
+              placeholder="e.g. 3"
+              required
+            /><br />
+            <button id="submit" type="submit">Start Game</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="gameModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>ScoreBoard</h2>
+        <p>Your Score: <span id="yourScore">0</span></p>
+        <p>Computer Score: <span id="computerScore">0</span></p>
+        <div id="el">
+          <div id="rock">🪨</div>
+          <div id="paper">🗞️</div>
+          <div id="scissors">✂️</div>
+        </div>
+        <div id="result"></div>
+      </div>
+    </div>
+    <script src="game1.js"></script>
   </body>
 </html>
